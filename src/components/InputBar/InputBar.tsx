@@ -25,7 +25,7 @@ const InputBar: React.FC = () => {
     }
 
     return (
-        <>
+        <div>
             <label htmlFor="myInput">choose url:</label>
             <Input
                 size="large"
@@ -44,7 +44,7 @@ const InputBar: React.FC = () => {
                 placeholder="example: my-socials"
             />
             <p>typed: {inputShortUrl}</p>
-        </>
+        </div>
     );
 }
 
