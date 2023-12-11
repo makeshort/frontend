@@ -8,21 +8,21 @@ const GlitchedElement: React.FC<ComponentProps> = (props) => {
 
     const [text, setText] = useState(props.text);
 
-    const handleMouseEnter = async (e: React.MouseEvent<HTMLDivElement>) => {
+    const handleMouseEnter = async () => {
         let n: number = text.length;
         let newText: string = getRandomString(n);
 
-        setText((prevState) => newText);
+        setText(newText);
 
         for (let i = 0; i < n; i++) {
             newText = replaceCharAtIndex(newText, i, text[i]);
             for (let j = i + 1; j < n; j++) {
                 newText = replaceCharAtIndex(newText, j, getRandomChar());
             }
-            setText((prevState) => newText);
+            setText(newText);
             await sleep(50);
         }
-        setText((prevState) => props.text);
+        setText(props.text);
     }
 
     const replaceCharAtIndex = (input: string, idx: number, char: string): string => {
