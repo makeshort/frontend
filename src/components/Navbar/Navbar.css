@@ -1,0 +1,58 @@
+.navbar {
+    background-color: transparent;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по вертикали */
+    padding: 0 3vh;
+    border-bottom: 1px solid #171717;
+    height: 5vh;
+}
+
+.logo-container {
+    margin-right: 20px;
+    height: 80px;
+    width: auto;
+}
+
+.logo {
+    height: 80px; /* Высота логотипа (настройте по вашему желанию) */
+    width: auto; /* Ширина регулируется автоматически в соответствии с высотой */
+}
+
+.nav-list {
+    list-style: none; /* Убираем маркеры у списка */
+    margin: 0;
+    padding-left: 16vw;
+    display: flex; /* Сделаем элементы горизонтальными */
+    justify-content: center;
+}
+
+.nav-item {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: color 0.3s ease; /* Анимация цвета текста */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #fff;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
