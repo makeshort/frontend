@@ -1,0 +1,20 @@
+div {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    color: #95BDEC;
+}
+
+.text-404 {
+    font-size: 300px;
+    text-shadow: 0 0 5px rgba(149, 189, 236, 0.5),
+                0 0 30px rgba(149, 189, 236, 0.5),
+                0 0 90px rgba(149, 189, 236, 0.5);
+}
+
+.error-text {
+    font-size: 80px;
+    text-shadow: 0 0 5px rgba(149, 189, 236, 0.5),
+                0 0 30px rgba(149, 189, 236, 0.5),
+                0 0 90px rgba(149, 189, 236, 0.5);
+}
