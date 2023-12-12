@@ -3,7 +3,8 @@
     display: flex;
     align-items: center; /* Выравнивание элементов по вертикали */
     padding: 0 3vh;
-    border-bottom: 1px solid #171717;
+    border-bottom: 1px solid #95BDEC;
+    box-shadow: 0 0 10px #95BDEC;
     height: 5vh;
 }
 
