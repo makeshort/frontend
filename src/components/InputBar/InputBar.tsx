@@ -14,11 +14,11 @@ const InputBar: React.FC = () => {
     const handleChangeInputUrl = (e: React.ChangeEvent<HTMLInputElement>): void => {
         let input = e.currentTarget.value;
 
-        if (isValidUrl(input) || input == "") {
+        if (isValidUrl(input) || input === "") {
             setInputUrlStatus("");
             setButtonDisabled(false);
 
-            if (input == "") setButtonDisabled(true); // TODO: Make this more convenient
+            if (input === "") setButtonDisabled(true); // TODO: Make this more convenient
 
         } else {
             setInputUrlStatus("error");
@@ -30,7 +30,7 @@ const InputBar: React.FC = () => {
     const handleChangeInputShortUrl = (e: React.ChangeEvent<HTMLInputElement>): void => {
         let input: string = e.currentTarget.value;
 
-        if (isValidPathSegment(input) || input == "") {
+        if (isValidPathSegment(input) || input === "") {
             setInputShortUrlStatus("");
         } else {
             setInputShortUrlStatus("error");
@@ -96,8 +96,10 @@ const InputBar: React.FC = () => {
                     components: {
                         Input: {
                             addonBg: "#FAFAFA",
-                            activeShadow: "0px 0px 5px rgba(148, 186, 233), 0px 0px 15px rgba(148, 186, 233), 0px 0px 100px rgba(148, 186, 233)",
-                            errorActiveShadow: "0px 0px 5px rgba(252, 116, 116), 0px 0px 15px rgba(252, 116, 116), 0px 0px 100px rgba(252, 116, 116)",
+                            // activeShadow: "0px 0px 5px rgba(148, 186, 233), 0px 0px 15px rgba(148, 186, 233), 0px 0px 100px rgba(148, 186, 233)",
+                            activeShadow: "0px 0px 30px rgba(148, 186, 233)",
+                            // errorActiveShadow: "0px 0px 5px rgba(252, 116, 116), 0px 0px 15px rgba(252, 116, 116), 0px 0px 100px rgba(252, 116, 116)",
+                            errorActiveShadow: "0px 0px 30px rgba(252, 116, 116)",
                             colorBgBase: "#191919"
                         },
                         Button: {

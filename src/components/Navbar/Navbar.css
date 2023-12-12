@@ -36,8 +36,8 @@
     transition: color 0.3s ease; /* Анимация цвета текста */
     font-size: 20px;
     font-weight: bold;
-    color: #98C0ED;
-    text-shadow: 0px 0px 20px rgba(148, 186, 233);
+    color: #95BDEC;
+    text-shadow: 0 0 20px rgba(148, 186, 233);
 }
 
 .nav-item::after {
