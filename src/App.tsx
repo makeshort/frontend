@@ -1,5 +1,6 @@
 import InputBar from "./components/InputBar/InputBar";
 import Navbar from "./components/Navbar/Navbar";
+import AboutPage from "./pages/About/About";
 import NoPage from './pages/NoPage/NoPage';
 import React from 'react';
 import './App.css';
@@ -12,7 +13,7 @@ function App() {
     //     <InputBar />
     //   </div>
     // </div>
-      <NoPage />
+      <AboutPage />
   );
 }
 
