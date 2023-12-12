@@ -1,15 +1,7 @@
+import {Input, ConfigProvider, Button} from "antd";
 import React, { useState } from "react";
-import { Input, Select, ConfigProvider } from "antd";
+import ButtonClick from '../Button/ButtonClick';
 import './InputBar.css';
-
-const { Option } = Select;
-
-const selectBefore = (
-    <Select defaultValue="sh.jus1d.ru/">
-        <Option value="sh.jus1d.ru/">sh.jus1d.ru/</Option>
-        {/*<Option value="sh.jus1d.online/">sh.jus1d.online/</Option>*/}
-    </Select>
-);
 
 const InputBar: React.FC = () => {
 
@@ -36,7 +28,7 @@ const InputBar: React.FC = () => {
                         Input: {
                             activeShadow: "0 0 0 1px rgba(5, 145, 255, 1)",
                             addonBg: "#FAFAFA",
-                        },
+                        }
                     },
                 }}>
                 <label htmlFor="myInput">choose url:</label>
@@ -51,12 +43,13 @@ const InputBar: React.FC = () => {
 
                 <Input
                     size="large"
-                    addonBefore={<span className="custom-addon"> {selectBefore} </span>}
+                    addonBefore={<b>sh.jus1d.ru/</b>}
                     value={inputShortUrl}
                     onChange={handleChangeInputShortUrl}
                     placeholder="example: my-socials"
                 />
                 <p>typed: {inputShortUrl}</p>
+                <ButtonClick />
             </ConfigProvider>
         </div>
     );
