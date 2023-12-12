@@ -1,3 +1,4 @@
+import ContactsPage from "./pages/ContactsPage/ContactsPage";
 import InputBar from "./components/InputBar/InputBar";
 import Navbar from "./components/Navbar/Navbar";
 import AboutPage from "./pages/About/About";
@@ -13,7 +14,7 @@ function App() {
     //     <InputBar />
     //   </div>
     // </div>
-      <AboutPage />
+      <ContactsPage />
   );
 }
 
