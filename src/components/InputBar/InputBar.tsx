@@ -51,6 +51,19 @@ const InputBar: React.FC = () => {
         message.success('Your URL created!');
     }
 
+    const handleEnter = async (e: React.KeyboardEvent<HTMLInputElement>): Promise<void> => {
+        messageApi.open({
+            type: 'loading',
+            content: 'Action in progress..',
+
+        });
+
+        await sleep(2500);
+
+        messageApi.destroy();
+        message.success('Your URL created!');
+    }
+
     const isValidUrl = (url: string): boolean => {
         const urlPattern = /^(https?:\/\/)?([\w-]+(\.[\w-]+)+\/?)(\S*)?$/;
 
@@ -75,22 +88,30 @@ const InputBar: React.FC = () => {
                     token: {
                         fontFamily: "Source Code Pro",
                         borderRadiusLG: 16,
+                        colorBgContainer: "#191919",
+                        colorBorder: "#8FC9FE",
+                        colorText: "#8FC9FE",
+                        colorTextPlaceholder: "#3e5870",
                     },
                     components: {
                         Input: {
-                            activeShadow: "0 0 0 1px rgba(5, 145, 255, 1)",
                             addonBg: "#FAFAFA",
+                            activeShadow: "0px 0px 5px rgba(148, 186, 233), 0px 0px 15px rgba(148, 186, 233), 0px 0px 100px rgba(148, 186, 233)",
+                            errorActiveShadow: "0px 0px 5px rgba(252, 116, 116), 0px 0px 15px rgba(252, 116, 116), 0px 0px 100px rgba(252, 116, 116)",
+                            colorBgBase: "#191919"
                         },
                         Button: {
-                            colorBgContainerDisabled: "#383838",
-                            colorTextDisabled: "#737373",
-                            borderColorDisabled: "#424242"
+                            colorBgContainerDisabled: "transparent",
+                            colorTextDisabled: "#3e5870",
+                            borderColorDisabled: "#3e5870"
                         }
                     },
                 }}>
                 <div className="input">
                     <div className="input-header">
-                        {"enter url ->"}
+                        <b>
+                            {"enter url ->"}
+                        </b>
                     </div>
 
                     <Input
@@ -99,22 +120,26 @@ const InputBar: React.FC = () => {
                         status={inputUrlStatus}
                         value={inputUrl}
                         onChange={handleChangeInputUrl}
+                        onPressEnter={handleEnter}
                         placeholder="https://ohh-my-very-looooooong-link.tech/and-some-data/"
                     />
                 </div>
 
                 <div className="input">
                     <div className="input-header">
-                        {"enter shorter ->"}
+                        <b>
+                            {"enter shorter ->"}
+                        </b>
                     </div>
 
                     <Input
                         size="large"
                         style={{width: "50vw", height: "5vh"}}
                         status={inputShortUrlStatus}
-                        addonBefore={<b>sh.jus1d.ru/s/</b>}
+                        // addonBefore={<b>sh.jus1d.ru/s/</b>}
                         value={inputShortUrl}
                         onChange={handleChangeInputShortUrl}
+                        onPressEnter={handleEnter}
                         placeholder="socials"
                     />
                 </div>
