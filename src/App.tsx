@@ -1,20 +1,17 @@
-import ContactsPage from "./pages/ContactsPage/ContactsPage";
-import InputBar from "./components/InputBar/InputBar";
-import Navbar from "./components/Navbar/Navbar";
-import AboutPage from "./pages/About/About";
-import NoPage from './pages/NoPage/NoPage';
+import Contacts from "./pages/Contacts/Contacts";
+import { Routes, Route } from "react-router-dom";
+import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
 import React from 'react';
-import './App.css';
 
 function App() {
   return (
-    // <div className="App">
-    //   <Navbar />
-    //   <div className="inputs">
-    //     <InputBar />
-    //   </div>
-    // </div>
-      <ContactsPage />
+      // <Routes>
+      //   <Route path="/" element={<Home />} />
+      //   <Route path="/about" element={<About />} />
+      //   <Route path="/contacts" element={<Contacts />} />
+      // </Routes>
+      <Home />
   );
 }
 

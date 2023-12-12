@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 
-const AboutPage: React.FC = () => {
+const About: React.FC = () => {
     return (
         <div>
             {"> about page"}
@@ -9,4 +9,4 @@ const AboutPage: React.FC = () => {
     );
 }
 
-export default AboutPage;
+export default About;

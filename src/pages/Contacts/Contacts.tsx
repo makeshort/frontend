@@ -1,7 +1,7 @@
 import React from 'react';
-import './ContactsPage.css';
+import './Contacts.css';
 
-const ContactsPage: React.FC = () => {
+const Contacts: React.FC = () => {
     return (
         <div>
             {"> contacts page"}
@@ -9,4 +9,4 @@ const ContactsPage: React.FC = () => {
     );
 }
 
-export default ContactsPage;
+export default Contacts;
