@@ -10,6 +10,7 @@ const InputBar: React.FC = () => {
     const [inputShortUrlStatus, setInputShortUrlStatus] = useState<"" | "warning" | "error" | undefined>("");
     const [messageApi, contextHolder] = message.useMessage();
     const [isButtonDisabled, setButtonDisabled] = useState(true);
+    const [createdUrl, setCreatedUrl] = useState("");
 
     const handleChangeInputUrl = (e: React.ChangeEvent<HTMLInputElement>): void => {
         const input = e.currentTarget.value.replace(" ", "");
@@ -58,13 +59,36 @@ const InputBar: React.FC = () => {
         message.success('Your URL created!');
     }
 
-    const callCreateUrl = async (url: string, shorter: string): Promise<string> => {
+    const onCopyCreatedUrl = async () => {
+        await navigator.clipboard.writeText(createdUrl);
+
+        copyText(createdUrl);
+
+        messageApi.open({
+            type: 'success',
+            content: 'URL copied!',
+        });
+
         await sleep(2500);
+
+        messageApi.destroy();
+    }
+
+    const copyText = (text: string) => {
+        navigator.clipboard.writeText(text);
+    }
+
+    const callCreateUrl = async (url: string, shorter: string): Promise<string> => {
+        await sleep(1);
 
         console.log(url);
         console.log(shorter);
 
-        return "https://sh.jus1d.ri/s/hs9v0salk";
+        const shortUrl: string = "https://sh.jus1d.tu/s/asjdgasi";
+
+        setCreatedUrl(shortUrl);
+
+        return "url";
     }
 
     const isValidUrl = (url: string): boolean => {
@@ -161,6 +185,18 @@ const InputBar: React.FC = () => {
                             {"> make!short"}
                         </b>
                     </Button>
+                </div>
+                <div  className="created-url">
+                    { createdUrl != "" &&
+                        <div className="copy-button" onClick={onCopyCreatedUrl}>
+                            <div>
+                                {"your created URL -> " + createdUrl}
+                            </div>
+                            <div>
+                                {"[ cl!ck to copy ]"}
+                            </div>
+                        </div>
+                    }
                 </div>
             </ConfigProvider>
         </div>

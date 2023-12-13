@@ -9,3 +9,16 @@
     font-size: 24px;
     text-shadow: 0 0 10px rgba(148, 186, 233), 0 0 30px rgba(148, 186, 233);
 }
+
+.created-url {
+    padding-top: 10vh;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    color: rgb(128, 253, 177);
+    text-shadow: 0 0 10px rgba(128, 253, 177), 0 0 30px rgba(128, 253, 177);
+}
+
+.copy-button {
+    cursor: pointer;
+}

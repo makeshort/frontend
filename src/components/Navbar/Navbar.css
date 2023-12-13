@@ -18,6 +18,16 @@
 .logo {
     height: 80px; /* Высота логотипа (настройте по вашему желанию) */
     width: auto; /* Ширина регулируется автоматически в соответствии с высотой */
+
+    font-weight: bold;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #95BDEC;
+    text-shadow: 0 0 10px rgba(148, 186, 233), 0 0 30px rgba(148, 186, 233);
 }
 
 .nav-list {
