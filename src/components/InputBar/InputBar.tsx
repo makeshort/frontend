@@ -46,7 +46,7 @@ const InputBar: React.FC = () => {
 
         });
 
-        await sleep(2500);
+        await callCreateUrl(inputUrl, inputShortUrl);
 
         messageApi.destroy();
         message.success('Your URL created!');
@@ -59,10 +59,19 @@ const InputBar: React.FC = () => {
 
         });
 
-        await sleep(2500);
+        await callCreateUrl(inputUrl, inputShortUrl);
 
         messageApi.destroy();
         message.success('Your URL created!');
+    }
+
+    const callCreateUrl = async (url: string, shorter: string): Promise<string> => {
+        await sleep(2500);
+
+        console.log(url);
+        console.log(shorter);
+
+        return "https://sh.jus1d.ri/s/hs9v0salk";
     }
 
     const isValidUrl = (url: string): boolean => {
