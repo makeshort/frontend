@@ -79,7 +79,7 @@ const InputBar: React.FC = () => {
     }
 
     const callCreateUrl = async (url: string, shorter: string): Promise<string> => {
-        await sleep(1);
+        await sleep(1000);
 
         console.log(url);
         console.log(shorter);
