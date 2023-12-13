@@ -32,27 +32,20 @@ const InputBar: React.FC = () => {
 
         if (input.length > 15 || !isValidPathSegment(input)) {
             setInputShortUrlStatus("error");
+            setButtonDisabled(true);
         } else {
             setInputShortUrlStatus("");
+            setButtonDisabled(false);
         }
 
         setInputShortUrl(input);
     }
 
-    const handleButtonClick = async (): Promise<void> => {
-        messageApi.open({
-            type: 'loading',
-            content: 'Action in progress..',
-
-        });
-
-        await callCreateUrl(inputUrl, inputShortUrl);
-
-        messageApi.destroy();
-        message.success('Your URL created!');
-    }
-
     const handleEnter = async (): Promise<void> => {
+        if (isButtonDisabled) {
+            return;
+        }
+
         messageApi.open({
             type: 'loading',
             content: 'Action in progress..',
@@ -161,7 +154,7 @@ const InputBar: React.FC = () => {
                         type="default"
                         size="large"
                         style={{width: "20vw", height: "5vh"}}
-                        onClick={handleButtonClick}
+                        onClick={handleEnter}
                         disabled={isButtonDisabled}
                     >
                         <b>

@@ -13,3 +13,8 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::selection {
+    background-color: #FFF; /* Цвет фона выделенного текста */
+    color: #1E1F21; /* Цвет текста при выделении */
+}
