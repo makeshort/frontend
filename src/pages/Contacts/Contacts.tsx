@@ -7,7 +7,7 @@ const Contacts: React.FC = () => {
         <div>
             <Navbar />
             <div className="contacts-header">
-                {"> c0ntacts pag3"}
+                {"-> c0ntacts pag3"}
             </div>
         </div>
     );

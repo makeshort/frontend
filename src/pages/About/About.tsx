@@ -7,7 +7,7 @@ const About: React.FC = () => {
         <div>
             <Navbar/>
             <div className="about-header">
-                {"> ab0ut pag3"}
+                {"-> ab0ut pag3"}
             </div>
         </div>
     );
