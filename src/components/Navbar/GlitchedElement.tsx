@@ -9,7 +9,7 @@ const GlitchedElement: React.FC<ComponentProps> = (props) => {
     const [text, setText] = useState(props.text);
 
     const handleMouseEnter = async () => {
-        let n: number = text.length;
+        const n: number = text.length;
         let newText: string = getRandomString(n);
 
         setText(newText);

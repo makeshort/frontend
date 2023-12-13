@@ -12,7 +12,7 @@ const InputBar: React.FC = () => {
     const [isButtonDisabled, setButtonDisabled] = useState(true);
 
     const handleChangeInputUrl = (e: React.ChangeEvent<HTMLInputElement>): void => {
-        let input = e.currentTarget.value;
+        const input = e.currentTarget.value.replace(" ", "");
 
         if (isValidUrl(input) || input === "") {
             setInputUrlStatus("");
@@ -28,22 +28,23 @@ const InputBar: React.FC = () => {
     }
 
     const handleChangeInputShortUrl = (e: React.ChangeEvent<HTMLInputElement>): void => {
-        let input: string = e.currentTarget.value;
+        const input: string = e.currentTarget.value.replace(" ", "");
 
-        if (isValidPathSegment(input) || input === "") {
-            setInputShortUrlStatus("");
-        } else {
+        if (input.length > 15 || !isValidPathSegment(input)) {
             setInputShortUrlStatus("error");
+        } else {
+            setInputShortUrlStatus("");
         }
-        setInputShortUrl(e.currentTarget.value);
+
+        setInputShortUrl(input);
     }
 
-    const handleButtonClick = async (e: React.MouseEvent<HTMLElement, MouseEvent>): Promise<void> => {
+    const handleButtonClick = async (): Promise<void> => {
         messageApi.open({
-                type: 'loading',
-                content: 'Action in progress..',
+            type: 'loading',
+            content: 'Action in progress..',
 
-            });
+        });
 
         await sleep(2500);
 
@@ -51,7 +52,7 @@ const InputBar: React.FC = () => {
         message.success('Your URL created!');
     }
 
-    const handleEnter = async (e: React.KeyboardEvent<HTMLInputElement>): Promise<void> => {
+    const handleEnter = async (): Promise<void> => {
         messageApi.open({
             type: 'loading',
             content: 'Action in progress..',
@@ -73,7 +74,7 @@ const InputBar: React.FC = () => {
     const isValidPathSegment = (pathSegment: string): boolean => {
         const regex = /^[a-zA-Z0-9_-]+$/;
 
-        return regex.test(pathSegment);
+        return regex.test(pathSegment) || pathSegment == "";
     }
 
     const sleep = (ms: number): Promise<void> => {
@@ -96,10 +97,10 @@ const InputBar: React.FC = () => {
                     components: {
                         Input: {
                             addonBg: "#FAFAFA",
-                            // activeShadow: "0px 0px 5px rgba(148, 186, 233), 0px 0px 15px rgba(148, 186, 233), 0px 0px 100px rgba(148, 186, 233)",
-                            activeShadow: "0px 0px 30px rgba(148, 186, 233)",
-                            // errorActiveShadow: "0px 0px 5px rgba(252, 116, 116), 0px 0px 15px rgba(252, 116, 116), 0px 0px 100px rgba(252, 116, 116)",
-                            errorActiveShadow: "0px 0px 30px rgba(252, 116, 116)",
+                            activeShadow: "0px 0px 5px rgba(148, 186, 233), 0px 0px 15px rgba(148, 186, 233), 0px 0px 100px rgba(148, 186, 233)",
+                            // activeShadow: "0px 0px 30px rgba(148, 186, 233)",
+                            errorActiveShadow: "0px 0px 5px rgba(252, 116, 116), 0px 0px 15px rgba(252, 116, 116), 0px 0px 100px rgba(252, 116, 116)",
+                            // errorActiveShadow: "0px 0px 30px rgba(252, 116, 116)",
                             colorBgBase: "#191919"
                         },
                         Button: {

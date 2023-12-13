@@ -1,18 +1,41 @@
-import Contacts from "./pages/Contacts/Contacts";
-import { Routes, Route } from "react-router-dom";
-import About from "./pages/About/About";
-import Home from "./pages/Home/Home";
-import React from 'react';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import NotFound from "./pages/NotFound/NotFound.tsx";
+import Contacts from "./pages/Contacts/Contacts.tsx";
+import About from "./pages/About/About.tsx";
+import Home from "./pages/Home/Home.tsx";
+import './App.css';
 
-function App() {
+const router = createBrowserRouter([
+    {
+        path: "/",
+        // element: <Navbar />,
+        children: [
+            {
+                path: "",
+                element: <Home />,
+            },
+            {
+                path: "about",
+                element: <About />,
+            },
+            {
+                path: "contacts",
+                element: <Contacts />,
+            },
+            {
+                path: "*",
+                element: <NotFound />,
+            },
+        ],
+    }
+]);
+
+const App = () => {
   return (
-      // <Routes>
-      //   <Route path="/" element={<Home />} />
-      //   <Route path="/about" element={<About />} />
-      //   <Route path="/contacts" element={<Contacts />} />
-      // </Routes>
-      <Home />
-  );
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  )
 }
 
-export default App;
+export default App

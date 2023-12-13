@@ -1,10 +1,11 @@
 .navbar {
+    font-family: "Source Code Pro", sans-serif;
     background-color: transparent;
     display: flex;
     align-items: center; /* Выравнивание элементов по вертикали */
     padding: 0 3vh;
-    border-bottom: 1px solid #95BDEC;
-    box-shadow: 0 0 10px #95BDEC;
+    /*border-bottom: 1px solid #95BDEC;*/
+    /*box-shadow: 0 0 10px #95BDEC;*/
     height: 5vh;
 }
 
@@ -35,10 +36,11 @@
     justify-content: center;
     position: relative;
     transition: color 0.3s ease; /* Анимация цвета текста */
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     color: #95BDEC;
-    text-shadow: 0 0 20px rgba(148, 186, 233);
+    text-shadow: 0 0 10px rgba(148, 186, 233), 0 0 30px rgba(148, 186, 233);
+    text-decoration: none; /* - убирает подчеркивание */
 }
 
 .nav-item::after {
