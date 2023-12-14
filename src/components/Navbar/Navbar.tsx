@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
                 <div className="logo-container">
                     <div className={"logo"}>
                         <b>
-                            {"$make.sh᲼᲼᲼᲼o_0"}
+                            {"$make.sh o_0"}
                         </b>
                     </div>
                 </div>
