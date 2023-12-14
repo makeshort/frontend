@@ -34,6 +34,7 @@ const InputBar: React.FC = () => {
         if (input.length > 15 || !isValidPathSegment(input)) {
             setInputShortUrlStatus("error");
             setButtonDisabled(true);
+
         } else {
             setInputShortUrlStatus("");
             setButtonDisabled(false);
