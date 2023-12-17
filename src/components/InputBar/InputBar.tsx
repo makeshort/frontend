@@ -87,6 +87,22 @@ const InputBar: React.FC = () => {
 
         const shortUrl: string = "https://sh.jus1d.tu/s/asjdgasi";
 
+        const headers = new Headers();
+
+        headers.set("Authorization", localStorage.getItem("makeshort_access_token") ?? "")
+
+        const body = shorter == "" ? {url: url} : {url: url, alias: shorter};
+
+        const response = await fetch('https://sh.jus1d.ru/api/url', {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(body)
+        });
+
+        const data = await response.json();
+
+        console.log(data);
+
         setCreatedUrl(shortUrl);
 
         return "url";
