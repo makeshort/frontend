@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to remote server
+        uses: D3rHase/ssh-command-action@v0.2.2
+        with:
+          host: ${{secrets.SSH_HOST}}
+          user: ${{secrets.SSH_USER}}
+          private_key: ${{secrets.SSH_PRIVATE_KEY}}
+          command: |
+            cd ${{ secrets.PROJECT_DIR }};
+            git checkout master;
+            git pull;
+            npm install;
+            npm run build;
+            cp -r ./dist/* /var/www/dist/
