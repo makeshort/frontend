@@ -21,4 +21,5 @@ jobs:
             git pull;
             npm install;
             npm run build;
+            rm -r /var/www/dist/*
             cp -r ./dist/* /var/www/dist/
