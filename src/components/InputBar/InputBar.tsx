@@ -2,6 +2,12 @@ import { Input, ConfigProvider, Button, message } from "antd";
 import React, { useState } from "react";
 import './InputBar.css';
 
+interface CreatedUrl {
+    id: string,
+    url: string,
+    alias: string,
+}
+
 const InputBar: React.FC = () => {
 
     const [inputUrl, setInputUrl] = useState('');
@@ -79,13 +85,11 @@ const InputBar: React.FC = () => {
         navigator.clipboard.writeText(text);
     }
 
-    const callCreateUrl = async (url: string, shorter: string): Promise<string> => {
+    const callCreateUrl = async (url: string, shorter: string): Promise<void> => {
         await sleep(1000);
 
         console.log(url);
         console.log(shorter);
-
-        const shortUrl: string = "https://sh.jus1d.tu/s/asjdgasi";
 
         const headers = new Headers();
 
@@ -99,13 +103,11 @@ const InputBar: React.FC = () => {
             body: JSON.stringify(body)
         });
 
-        const data = await response.json();
+        const data: CreatedUrl = await response.json();
 
         console.log(data);
 
-        setCreatedUrl(shortUrl);
-
-        return "url";
+        setCreatedUrl("https://sh.jus1d.ru/s/" + data.alias);
     }
 
     const isValidUrl = (url: string): boolean => {
