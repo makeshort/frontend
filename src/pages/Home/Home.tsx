@@ -6,14 +6,10 @@ import {HomeTheme} from "../../Config.tsx";
 
 const Home: React.FC = () => {
 
-    const [messageApi, contextHolder] = message.useMessage();
-
     const flag = false;
 
     return (
         <div>
-            {contextHolder}
-
             <Navbar />
 
             <div className={"home-root"}>
