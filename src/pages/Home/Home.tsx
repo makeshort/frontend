@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar/Navbar";
 import React from 'react';
 import './Home.css';
-import {Button, ConfigProvider, Input, message} from "antd";
+import {Button, ConfigProvider, Input} from "antd";
 import {HomeTheme} from "../../Config.tsx";
 
 const Home: React.FC = () => {
