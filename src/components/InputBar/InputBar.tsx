@@ -1,6 +1,7 @@
 import { Input, ConfigProvider, Button, message } from "antd";
 import React, { useState } from "react";
 import './InputBar.css';
+import {HomeTheme} from "../../Config.tsx";
 
 interface CreatedUrl {
     id: string,
@@ -129,32 +130,7 @@ const InputBar: React.FC = () => {
     return (
         <div>
             {contextHolder}
-            <ConfigProvider
-                theme={{
-                    token: {
-                        fontFamily: "Source Code Pro",
-                        borderRadiusLG: 16,
-                        colorBgContainer: "#191919",
-                        colorBorder: "#8FC9FE",
-                        colorText: "#8FC9FE",
-                        colorTextPlaceholder: "#3e5870",
-                    },
-                    components: {
-                        Input: {
-                            addonBg: "#FAFAFA",
-                            activeShadow: "0px 0px 5px rgba(148, 186, 233), 0px 0px 15px rgba(148, 186, 233), 0px 0px 100px rgba(148, 186, 233)",
-                            // activeShadow: "0px 0px 30px rgba(148, 186, 233)",
-                            errorActiveShadow: "0px 0px 5px rgba(252, 116, 116), 0px 0px 15px rgba(252, 116, 116), 0px 0px 100px rgba(252, 116, 116)",
-                            // errorActiveShadow: "0px 0px 30px rgba(252, 116, 116)",
-                            colorBgBase: "#191919"
-                        },
-                        Button: {
-                            colorBgContainerDisabled: "transparent",
-                            colorTextDisabled: "#3e5870",
-                            borderColorDisabled: "#3e5870"
-                        }
-                    },
-                }}>
+            <ConfigProvider theme={ HomeTheme }>
                 <div className="input">
                     <div className="input-header">
                         <b>
