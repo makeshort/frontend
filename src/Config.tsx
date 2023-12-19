@@ -23,3 +23,22 @@ export const HomeTheme = {
         }
     },
 }
+
+export const RateButtonTheme = {
+    token: {
+        fontFamily: "Source Code Pro",
+        borderRadiusLG: 16,
+        colorBgContainer: "#1E1F21",
+        colorBorder: "#ffde8a",
+        defaultGhostBorderColor: "#ffde8a",
+        activeBorderColor: "#ffde8a",
+    },
+    components: {
+        Button: {
+            borderColor: "#f00",
+            colorBgContainerDisabled: "transparent",
+            colorTextDisabled: "#FFDE8A",
+            borderColorDisabled: "#FFDE8A"
+        }
+    },
+}

@@ -6,6 +6,7 @@ import About from "./pages/About/About.tsx";
 import Home from "./pages/Home/Home.tsx";
 import './App.css';
 import Login from "./pages/Login/Login.tsx";
+import Rate from "./pages/Rate/Rate.tsx";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,14 @@ const router = createBrowserRouter([
             {
                 path: "contacts",
                 element: <Contacts />,
+            },
+            {
+                path: "my-urls",
+                element: <NotFound />,
+            },
+            {
+                path: "rate",
+                element: <Rate />,
             },
             {
                 path: "register",

@@ -22,13 +22,13 @@ const Navbar: React.FC = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/about"} className={"nav-item"}>
-                            <GlitchedElement text="> about"/>
+                        <NavLink to={"/my-urls"} className={"nav-item"}>
+                            <GlitchedElement text="> my_urls"/>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/contacts"} className={"nav-item"}>
-                            <GlitchedElement text="> contacts"/>
+                        <NavLink to={"/rate"} className={"nav-item"}>
+                            <GlitchedElement text="> rate"/>
                         </NavLink>
                     </li>
                 </ul>

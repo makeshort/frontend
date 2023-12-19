@@ -1,17 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-
-body {
-    font-family: "Source Code Pro", sans-serif;
-    background-color: #1E1F21;
-    color: white;
+.home-root {
+    display: grid;
+    place-items: center;
+    height: 95vh;
+    /*background-color: #101010;*/
 }
 
-.App {
-    text-align: center;
-}
-
-.inputs {
+.home-container {
+    /*background-color: #80fdb1;*/
+    height: 60vh;
+    width: 60vw;
     display: flex;
-    justify-content: center; /* Выравнивание по горизонтали по центру */
-    align-items: center; /* Выравнивание по вертикали по центру */
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.feedback-container {
+    /*background-color: #00ffff;*/
+    height: 35vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+
+    .success {
+        color: #80fdb1;
+        text-shadow: 0 0 10px rgb(128, 253, 177), 0 0 30px rgb(128, 253, 177);
+    }
+
+    .failed {
+        color: #ff5e5e;
+        text-shadow: 0 0 10px rgb(255, 94, 94), 0 0 30px rgb(255, 94, 94);
+    }
+}
+
+.home-item {
+    margin-bottom: 2%;
+}
+
+.input-header {
+    text-align: left;
+    padding: 1%;
+    color: #95BDEC;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(148, 186, 233), 0 0 30px rgba(148, 186, 233);
+}
+
+.home-input {
+    height: 5vh;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.makesh-button {
+    margin-top: 2%;
+    width: 20vw;
+    height: 5vh;
+    font-weight: bold;
 }
