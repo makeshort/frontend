@@ -42,9 +42,9 @@
 .input-header {
     text-align: left;
     padding: 1%;
-    color: #95BDEC;
     font-size: 24px;
     font-weight: bold;
+    color: #95BDEC;
     text-shadow: 0 0 10px rgba(148, 186, 233), 0 0 30px rgba(148, 186, 233);
 }
 

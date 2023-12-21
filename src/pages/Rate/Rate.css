@@ -15,6 +15,16 @@
     height: 30vh;
 }
 
+.thanks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-size: 48px;
+    color: rgb(255, 222, 138);
+    text-shadow: 0 0 10px rgba(255, 222, 138), 0 0 30px rgba(255, 222, 138);
+}
+
 .rate-star {
     user-select: none;
     color: #2A2B2E;
@@ -24,5 +34,5 @@
 .rate-star-active {
     user-select: none;
     color: #FFDE8A;
-    text-shadow: 0 0 50px rgba(255, 222, 138, 0.5), 0 0 200px rgba(255, 222, 138, 0.5);
+    text-shadow: 0 0 10px rgba(255, 222, 138, 0.5), 0 0 30px rgba(255, 222, 138, 0.7), 0 0 150px rgba(255, 222, 138);
 }

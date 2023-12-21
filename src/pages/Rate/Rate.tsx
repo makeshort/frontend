@@ -62,15 +62,12 @@ const Rate: React.FC = () => {
                     *
                 </div>
             </div>
-            {/*<div className={"confirm-container"}>*/}
-            {/*    <ConfigProvider theme={ RateButtonTheme }>*/}
-            {/*        <Button*/}
-            {/*            className={"rate-confirm-button"}*/}
-            {/*            size="large">*/}
-            {/*            {"c0nfirm"}*/}
-            {/*        </Button>*/}
-            {/*    </ConfigProvider>*/}
-            {/*</div>*/}
+            {
+                rate != 0 &&
+                <div className={"thanks-container"}>
+                    {"thanks for your feedback <3"}
+                </div>
+            }
         </div>
     );
 }
