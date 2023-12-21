@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/my-urls"} className={"nav-item"}>
+                        <NavLink to={"/urls"} className={"nav-item"}>
                             <GlitchedElement text="> my_urls"/>
                         </NavLink>
                     </li>
