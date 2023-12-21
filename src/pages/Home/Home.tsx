@@ -40,7 +40,12 @@ const Home: React.FC = () => {
 
         if (isValidPathSegment(input) || input === "") {
             setInputAliasStatus("");
-            setIsCreateImpossible(false);
+
+            if (inputUrl == "" || inputUrlStatus != "") {
+                setIsCreateImpossible(true);
+            } else {
+                setIsCreateImpossible(false);
+            }
         } else {
             setInputAliasStatus("error");
             setIsCreateImpossible(true);
