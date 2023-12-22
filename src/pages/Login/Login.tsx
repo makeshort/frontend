@@ -11,19 +11,17 @@ const Login: React.FC = () => {
     const [emailInput, setEmailInput] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
 
-    const login = async () => {
+    const onSubmit = async () => {
         const tokens = await Api.auth.login({
             email: emailInput,
             password: passwordInput,
         });
 
-        console.log(tokens);
-
-        console.log(tokens.refresh_token);
-
         setCookie(null, "_refreshToken", tokens.refresh_token, {
             path: "/",
         });
+
+        localStorage.setItem("access_token", tokens.access_token);
     }
 
     const onEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +58,7 @@ const Login: React.FC = () => {
 
             <div className={"login-item"}>
                 <ButtonConfig>
-                    <Button className={"login-button"} onClick={login}>Login</Button>
+                    <Button className={"login-button"} onClick={onSubmit}>Login</Button>
                 </ButtonConfig>
             </div>
         </div>
