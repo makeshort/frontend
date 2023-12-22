@@ -4,21 +4,22 @@ import { Button, Input } from "antd";
 import React, {useState} from "react";
 import './Register.css';
 
+import * as Api from "../../api";
+
 const Register: React.FC = () => {
 
     const [emailInput, setEmailInput] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
     const [usernameInput, setUsernameInput] = useState('');
 
-    const register = async () => {
-        let response = await fetch('https://sh.jus1d.ru/api/auth/signup', {
-            method: 'POST',
-            body: JSON.stringify({email: emailInput,  username: usernameInput, password: passwordInput}),
+    const onSubmit = async () => {
+        const user = await Api.auth.register({
+            email: emailInput,
+            password: passwordInput,
+            username: usernameInput,
         });
 
-        let data = await response.json();
-
-        console.log(data);
+        console.log(user);
     }
 
     const onEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -68,7 +69,7 @@ const Register: React.FC = () => {
 
             <div className={"register-item"}>
                 <ButtonConfig>
-                    <Button className={"register-button"} onClick={register}>Register</Button>
+                    <Button className={"register-button"} onClick={onSubmit}>Register</Button>
                 </ButtonConfig>
             </div>
         </div>

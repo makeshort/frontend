@@ -3,11 +3,8 @@ import InputConfig from "../../components/InputConfig.tsx";
 import { Button, Input } from "antd";
 import React, {useState} from "react";
 import './Login.css';
-
-interface TokenPair {
-    access_token: string,
-    refresh_token: string,
-}
+import * as Api from "../../api";
+import { setCookie } from "nookies";
 
 const Login: React.FC = () => {
 
@@ -15,17 +12,18 @@ const Login: React.FC = () => {
     const [passwordInput, setPasswordInput] = useState('');
 
     const login = async () => {
-        const response = await fetch('https://sh.jus1d.ru/api/auth/session', {
-            method: 'POST',
-            body: JSON.stringify({email: emailInput,  password: passwordInput}),
+        const tokens = await Api.auth.login({
+            email: emailInput,
+            password: passwordInput,
         });
 
-        const data: TokenPair = await response.json();
+        console.log(tokens);
 
-        document.cookie = `_refreshToken=${data.refresh_token}; expires=` + new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000).toUTCString();
-        localStorage.setItem("makeshort_access_token", data.access_token);
+        console.log(tokens.refresh_token);
 
-        console.log(data);
+        setCookie(null, "_refreshToken", tokens.refresh_token, {
+            path: "/",
+        });
     }
 
     const onEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
