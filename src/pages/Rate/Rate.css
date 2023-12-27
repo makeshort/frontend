@@ -26,12 +26,16 @@
 }
 
 .rate-star {
+    transition: 0.3s;
+    scale: 1;
     user-select: none;
     color: #2A2B2E;
     display: inline-grid;
 }
 
 .rate-star-active {
+    transition: 0.3s;
+    scale: 1.1;
     user-select: none;
     color: #FFDE8A;
     text-shadow: 0 0 10px rgba(255, 222, 138, 0.5), 0 0 30px rgba(255, 222, 138, 0.7), 0 0 150px rgba(255, 222, 138);
