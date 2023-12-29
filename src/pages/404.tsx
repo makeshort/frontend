@@ -9,10 +9,10 @@ const Custom404: React.FC = () => {
 
             <div className={styles.error}>
                 <div className={styles.errorCode}>
-                    404:
+                    {"<>404"}
                 </div>
                 <div className={styles.errorText}>
-                    page not found
+                    {"page not found"}
                 </div>
             </div>
         </div>
