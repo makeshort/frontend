@@ -1,5 +1,5 @@
-import axios from '../core/axios.ts';
-import {LoginRequestDTO, LoginResponseDTO, RegisterRequestDTO, RegisterResponseDTO, UserDTO} from "./dto/auth.dto.ts";
+import {LoginRequestDTO, LoginResponseDTO, RegisterRequestDTO, RegisterResponseDTO, UserDTO} from "./dto/auth.dto";
+import axios from "./core/axios";
 
 export const register = async (values: RegisterRequestDTO): Promise<RegisterResponseDTO> => {
     return (await axios.post("/auth/signup", values)).data;

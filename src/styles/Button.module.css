@@ -1,0 +1,39 @@
+.button {
+    cursor: pointer;
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--background-color-transparent);
+    border-radius: 16px;
+    color: var(--main-color);
+    border: 0;
+    outline: 2px solid var(--main-color);
+    transition: 0.3s;
+}
+
+.button:not([disabled]):hover {
+    color: var(--main-color);
+    outline: 2px solid var(--main-color);
+    transition: 0.3s;
+    box-shadow: 0 0 5px var(--main-color), 0 0 50px var(--main-color);
+}
+
+.button:disabled {
+    color: var(--placeholder-color);
+    outline: 2px solid var(--placeholder-color);
+    transition: 0.3s;
+}
+
+.buttonPressed {
+    color: white;
+    outline: 2px solid white;
+    transition: 0.3s;
+    box-shadow: 0 0 5px white, 0 0 50px white;
+}
+
+.buttonPressed:not([disabled]):hover {
+    color: white;
+    outline: 2px solid white;
+    transition: 0.3s;
+    box-shadow: 0 0 5px white, 0 0 50px white;
+}

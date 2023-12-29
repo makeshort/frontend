@@ -1,0 +1,59 @@
+.input {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    border: 0;
+    outline: 1px solid var(--main-color);
+    border-radius: 15px;
+    background-color: var(--background-color-transparent);
+    transition: 0.3s;
+    color: var(--main-color);
+}
+
+.input:focus {
+    transition: 0.3s;
+    outline: 2px solid var(--main-color);
+    box-shadow: 0 0 5px rgba(148, 186, 233), 0 0 15px rgba(148, 186, 233), 0 0 100px rgba(148, 186, 233);
+}
+
+.input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.inputError {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    border: 0;
+    outline: 1px solid var(--error-color);
+    border-radius: 15px;
+    background-color: var(--background-color-transparent);
+    transition: 0.3s;
+    color: var(--error-color);
+}
+
+.inputError:focus {
+    transition: 0.3s;
+    outline: 2px solid var(--error-color);
+    box-shadow: 0 0 5px rgba(252, 116, 116), 0 0 15px rgba(252, 116, 116), 0 0 100px rgba(252, 116, 116);
+}
+
+.inputError::placeholder {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 16px;
+    color: #703E3EFF;
+}
+
+.header {
+    padding-bottom: 1vh;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--main-color), 0 0 30px var(--main-color);
+}
+
+.headerError {
+    color: var(--error-color);
+    text-shadow: 0 0 10px var(--error-color), 0 0 30px var(--error-color);
+}

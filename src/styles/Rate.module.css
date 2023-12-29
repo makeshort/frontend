@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 360px;
+    font-weight: bold;
+    height: 65vh;
+}
+
+.star {
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+    /*color: #2A2B2E;*/
+    color: rgba(255, 222, 138, 0.18);
+    text-shadow: 0 0 10px rgba(255, 222, 138, 0.18), 0 0 30px rgba(255, 222, 138, 0.18);
+}
+
+.active {
+    scale: 1.1;
+    color: #FFDE8A;
+    text-shadow: 0 0 10px rgba(255, 222, 138, 0.5), 0 0 30px rgba(255, 222, 138, 0.7), 0 0 150px rgba(255, 222, 138);
+}

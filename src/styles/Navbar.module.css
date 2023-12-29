@@ -1,0 +1,88 @@
+.navbar {
+    height: 4vh;
+    font-size: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.auth {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    text-decoration: none;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    font-size: 20px;
+
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color), 0 0 30px var(--main-color);
+
+    transition: 0.3s;
+}
+
+.auth:hover {
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 30px white;
+    transition: 0.3s;
+}
+
+.navList {
+    width: 60vw;
+    padding-top: 1.5vh;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.navItem {
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color), 0 0 30px var(--main-color);
+    position: relative;
+}
+
+.navItem:hover {
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 30px white;
+    transition: 0.3s;
+}
+
+.logoContainer {
+    width: 15vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color), 0 0 30px var(--main-color);
+}
+
+.logo:hover {
+    cursor: default;
+}

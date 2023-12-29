@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root {
+    user-select: none;
+    overflow: hidden;
+    --background-color: #1E1F21;
+    --main-color: #92BDEC;
+    --success-color: #80fdb1;
+    --error-color: #ff5e5e;
+    --scrollbar-color: #101010;
+    --placeholder-color: #3e5870;
+    --background-color-transparent: #19191988;
+
+    font-family: "Source Code Pro", sans-serif;
+    background-image: url("../../public/background.png");
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center;*/
+    background-color: var(--background-color);
+    color: var(--main-color);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: white;
+    color: var(--background-color);
+}
+
+::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}

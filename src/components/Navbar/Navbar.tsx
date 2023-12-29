@@ -1,39 +1,44 @@
-import GlitchedElement from "./GlitchedElement";
-import { NavLink } from "react-router-dom";
-import React from "react";
-import './Navbar.css';
+import GlitchedText from "@/components/glitchedText/glitchedText";
+import styles from "@/styles/Navbar.module.css";
+import React from 'react';
 
 const Navbar: React.FC = () => {
-
     return (
-        <div>
-            <nav className="navbar">
-                <div className="logo-container">
-                    <div className={"logo"}>
+        <>
+            <nav className={styles.navbar}>
+                <div className={styles.logoContainer}>
+                    <div className={styles.logo}>
                         <b>
-                            {"$make.sh o_0"}
+                            {"$make.sh"}
                         </b>
                     </div>
                 </div>
-                <ul className="nav-list">
+
+                <ul className={styles.navList}>
                     <li>
-                        <NavLink to={"/"} className={"nav-item"}>
-                            <GlitchedElement text="> home"/>
-                        </NavLink>
+                        <a href={"/"} className={styles.navItem}>
+                            <GlitchedText text=">home"/>
+                        </a>
                     </li>
                     <li>
-                        <NavLink to={"/urls"} className={"nav-item"}>
-                            <GlitchedElement text="> my_urls"/>
-                        </NavLink>
+                        <a href={"/dashboard"} className={styles.navItem}>
+                        <GlitchedText text=">dashboard"/>
+                        </a>
                     </li>
                     <li>
-                        <NavLink to={"/rate"} className={"nav-item"}>
-                            <GlitchedElement text="> rate"/>
-                        </NavLink>
+                        <a href={"/rate"} className={styles.navItem}>
+                            <GlitchedText text=">rate"/>
+                        </a>
                     </li>
                 </ul>
+
+                <div className={styles.authContainer}>
+                    <a href={"/auth"} className={styles.auth}>
+                        {"--> {auth}"}
+                    </a>
+                </div>
             </nav>
-        </div>
+        </>
     );
 }
 

@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 
-interface ComponentProps {
-    text: string;
+interface Props {
+    text: string,
 }
 
-const GlitchedElement: React.FC<ComponentProps> = (props) => {
-
+const GlitchedText: React.FC<Props> = (props) => {
     const [text, setText] = useState(props.text);
 
-    const handleMouseEnter = async () => {
+    const handleMouseEnter = async (): Promise<void> => {
         const n: number = text.length;
         let newText: string = getRandomString(n);
 
@@ -20,7 +19,7 @@ const GlitchedElement: React.FC<ComponentProps> = (props) => {
                 newText = replaceCharAtIndex(newText, j, getRandomChar());
             }
             setText(newText);
-            await sleep(50);
+            await sleep(60);
         }
         setText(props.text);
     }
@@ -44,7 +43,7 @@ const GlitchedElement: React.FC<ComponentProps> = (props) => {
     }
 
     const getRandomChar = (): string => {
-        let alp = 'abcdefghijklmnopqrstuvwxyz1234567890';
+        let alp = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
         alp += alp.toUpperCase();
 
         const idx: number = Math.floor(Math.random() * alp.length);
@@ -56,8 +55,10 @@ const GlitchedElement: React.FC<ComponentProps> = (props) => {
     }
 
     return (
-        <div onMouseEnter={handleMouseEnter}>{text}</div>
+        <div onMouseEnter={handleMouseEnter}>
+            {text}
+        </div>
     );
 }
 
-export default GlitchedElement;
+export default GlitchedText;
