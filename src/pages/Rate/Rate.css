@@ -30,6 +30,8 @@
     scale: 1;
     user-select: none;
     color: #2A2B2E;
+    /*color: rgba(255, 222, 138, 0.18);*/
+    /*text-shadow: 0 0 10px rgba(255, 222, 138, 0.18), 0 0 30px rgba(255, 222, 138, 0.18);*/
     display: inline-grid;
 }
 
