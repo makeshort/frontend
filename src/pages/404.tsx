@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar/navbar";
 
 const Custom404: React.FC = () => {
     return (
-        <div>
+        <>
             <Navbar/>
 
             <div className={styles.error}>
@@ -15,7 +15,7 @@ const Custom404: React.FC = () => {
                     {"page not found"}
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

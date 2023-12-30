@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar/navbar";
-import styles from "@/styles/Rate.module.css";
+import styles from "./Rate.module.css";
 import React, {useState} from "react";
 
 const Rate: React.FC = () => {

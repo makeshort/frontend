@@ -1,5 +1,4 @@
-import {ConfigProvider, Input as InputAntd} from "antd";
-import styles from "@/styles/Input.module.css";
+import styles from "./Input.module.css";
 import React from "react";
 
 interface Props {

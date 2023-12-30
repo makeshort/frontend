@@ -1,5 +1,4 @@
-import { Button as ButtonAntd, ConfigProvider } from "antd";
-import styles from "@/styles/Button.module.css";
+import styles from "./Button.module.css";
 import React, { useState } from "react";
 
 interface Props {

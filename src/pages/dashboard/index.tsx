@@ -1,4 +1,4 @@
-import styles from "@/styles/Dashboard.module.css";
+import styles from "./Dashboard.module.css";
 import Navbar from "@/components/navbar/navbar";
 import React from "react";
 
