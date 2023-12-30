@@ -48,7 +48,7 @@ const Dashboard: React.FC = () => {
     }
 
     return (
-        <div>
+        <>
             <Navbar />
 
             <div className={styles.body}>
@@ -56,7 +56,7 @@ const Dashboard: React.FC = () => {
                     {renderUrls()}
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
