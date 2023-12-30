@@ -86,10 +86,10 @@ const Home: React.FC = () => {
     return (
         <>
             <Head>
-                <title> {"$home | make.sh"} </title>
+                <title>$home | make.sh</title>
                 <meta name="description" content="Fast & simple URL shortener"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="icon" href={"../../public/favicon.ico"}/>
+                <link rel="icon" href="../../public/favicon.ico"/>
             </Head>
 
             <Navbar />
