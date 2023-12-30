@@ -25,24 +25,24 @@ const Navbar: React.FC = () => {
                 <ul className={styles.navList}>
                     <li>
                         <a href={"/"} className={styles.navItem + (isHomePage ? ` ${styles.current}` : "")}>
-                            <GlitchedText text=">home"/>
+                            { isHomePage ? <GlitchedText text="<*> home"/> : <GlitchedText text="<> home"/>}
                         </a>
                     </li>
                     <li>
                         <a href={"/dashboard"} className={styles.navItem + (isDashboardPage ? ` ${styles.current}` : "")}>
-                            <GlitchedText text=">dashboard"/>
+                            { isDashboardPage ? <GlitchedText text="<*> dashboard"/> : <GlitchedText text="<> dashboard"/>}
                         </a>
                     </li>
                     <li>
-                        <a href={"/rate"} className={styles.navItem + (isRatePage ? ` ${styles.current}` : "")}>
-                            <GlitchedText text=">rate"/>
+                        <a href={"/rate"} className={styles.rateItem + (isRatePage ? ` ${styles.rateCurrent}` : "")}>
+                            { isRatePage ? <GlitchedText text="<*> rate_us"/> : <GlitchedText text="<> rate_us"/>}
                         </a>
                     </li>
                 </ul>
 
                 <div className={styles.authContainer}>
                     <a href={"/auth"} className={styles.auth + (isAuthPage ? ` ${styles.current}` : "")}>
-                        {"--> {auth}"}
+                        {"{auth} -->"}
                     </a>
                 </div>
             </nav>

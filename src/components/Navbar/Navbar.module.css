@@ -71,6 +71,28 @@
     transition: 0.3s;
 }
 
+.rateItem {
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color), 0 0 30px var(--main-color);
+    position: relative;
+}
+
+.rateItem:hover {
+    color: rgba(255, 222, 138);
+    text-shadow: 0 0 10px rgba(255, 222, 138), 0 0 30px rgba(255, 222, 138);
+    transition: 0.3s;
+}
+
+.rateCurrent {
+    color: rgba(255, 222, 138);
+    text-shadow: 0 0 10px rgba(255, 222, 138), 0 0 30px rgba(255, 222, 138);
+    transition: 0.3s;
+}
+
 .logoContainer {
     width: 15vw;
     display: flex;

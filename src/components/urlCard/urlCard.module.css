@@ -1,0 +1,31 @@
+.container {
+    border: 1px solid var(--main-color);
+    border-radius: 16px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-left: 15px;
+
+    box-shadow: 0 0 10px #92BDEC80;
+}
+
+.item {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color), 0 0 30px var(--main-color);
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.delete {
+    color: var(--error-color);
+    text-shadow: 0 0 10px var(--error-color), 0 0 30px var(--error-color);
+    margin-left: auto;
+}

@@ -88,7 +88,7 @@ const Login: React.FC = () => {
                     <Button
                         onClick={handleLogin}
                         disabled={inputLoginStatus === "error" || inputPasswordStatus === "error"}
-                        text={"--> l0gin"}
+                        text={"l0gin -->"}
                     />
                 </div>
             </div>

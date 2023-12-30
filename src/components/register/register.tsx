@@ -114,7 +114,7 @@ const Login: React.FC = () => {
                     <Button
                         onClick={handleRegister}
                         disabled={inputLoginStatus === "error" || inputUsernameStatus === "error" || inputPasswordStatus === "error"}
-                        text={"--> r3gister"}
+                        text={"r3gister -->"}
                     />
                 </div>
             </div>
