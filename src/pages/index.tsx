@@ -113,6 +113,7 @@ const Home: React.FC = () => {
                 <div className={styles.inputContainer}>
                     <div className={styles.item}>
                         <Input
+                            type={"text"}
                             header={"enter{url} -->"}
                             placeholder={"https://ohh-my-very-looooong-link.tech/and-some-staff-here"}
                             status={inputUrlStatus}
@@ -125,6 +126,7 @@ const Home: React.FC = () => {
 
                     <div className={styles.item}>
                         <Input
+                            type={"text"}
                             header={"enter{shorter} -->"}
                             placeholder={"socials"}
                             status={inputAliasStatus}

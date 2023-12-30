@@ -13,9 +13,9 @@
 
     font-family: "Source Code Pro", sans-serif;
     background-image: url("../../public/background.png");
-    /*background-size: cover;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: center center;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-color: var(--background-color);
     color: var(--main-color);
 
