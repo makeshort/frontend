@@ -1,4 +1,4 @@
-import styles from "./Input.module.css";
+import styles from "./input.module.css";
 import React from "react";
 
 interface Props {

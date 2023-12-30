@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import styles from "./Register.module.css";
+import styles from "./register.module.css";
 import Input from "@/components/input/input";
 import Button from "@/components/button/button";
 import * as Api from "@/api";

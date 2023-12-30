@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar/navbar";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/home.module.css";
 import Input from "@/components/input/input";
 import React, {useState} from "react";
 import Head from 'next/head';

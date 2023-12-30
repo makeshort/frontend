@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import styles from "./Login.module.css";
+import styles from "./login.module.css";
 import Input from "@/components/input/input";
 import Button from "@/components/button/button";
 import * as Api from "@/api";

@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar/navbar";
-import styles from './Auth.module.css';
+import styles from './auth.module.css';
 import React, {useState} from "react";
 import Login from "@/components/login/login";
 import Register from "@/components/register/register";
