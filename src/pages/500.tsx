@@ -2,21 +2,21 @@ import styles from "@/styles/error.module.css";
 import React from 'react';
 import Navbar from "@/components/navbar/navbar";
 
-const Custom404: React.FC = () => {
+const Custom500: React.FC = () => {
     return (
         <>
             <Navbar/>
 
             <div className={styles.error}>
                 <div className={styles.errorCode}>
-                    {"<!>404"}
+                    {"<!>500"}
                 </div>
                 <div className={styles.errorText}>
-                    {"page not found"}
+                    {"server is sleeping"}
                 </div>
             </div>
         </>
     );
 }
 
-export default Custom404;
+export default Custom500;

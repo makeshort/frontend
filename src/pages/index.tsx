@@ -125,7 +125,7 @@ const Home: React.FC = () => {
                     <div className={styles.item + " " + styles.confirmButton}>
                         <Button
                             text={"make!short"}
-                            disabled={inputUrlStatus === "error" || inputAliasStatus === "error"}
+                            disabled={inputUrlStatus === "error" || inputAliasStatus === "error" || inputUrlValue === ""}
                             onClick={handleCreateUrl}
                         />
                     </div>
