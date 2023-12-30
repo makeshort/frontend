@@ -30,13 +30,13 @@ const Rate: React.FC = () => {
 
         for (let i = 1; i <= 5; i++) {
             stars.push(
-                <div
+                <span
                     className={getClassNameByStarPosition(i)}
                     onClick={() => setRate(i)}
                     onMouseEnter={() => setSelectedRate(i)}
                     onMouseLeave={() => setSelectedRate(0)}>
                     *
-                </div>
+                </span>
             );
         }
 

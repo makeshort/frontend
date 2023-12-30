@@ -59,6 +59,12 @@
     position: relative;
 }
 
+.current {
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 30px white;
+    transition: 0.3s;
+}
+
 .navItem:hover {
     color: white;
     text-shadow: 0 0 10px white, 0 0 30px white;
