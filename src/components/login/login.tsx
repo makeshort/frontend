@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import styles from "./Login.module.css";
 import Input from "@/components/input/input";
 import Button from "@/components/button/button";
+import * as Api from "@/api";
 
 const Login: React.FC = () => {
 
@@ -34,8 +35,19 @@ const Login: React.FC = () => {
         setInputPasswordValue(input);
     }
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
+        if (inputLoginStatus === "error" || inputPasswordStatus === "error") {
+            return;
+        }
 
+        const tokens = await Api.auth.login({
+            email: inputLoginValue,
+            password: inputPasswordValue,
+        });
+
+        console.log(tokens);
+
+        window.location.href = "/";
     }
 
     const isValidEmail = (email: string) => {

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import styles from "./Register.module.css";
 import Input from "@/components/input/input";
 import Button from "@/components/button/button";
+import * as Api from "@/api";
 
 const Login: React.FC = () => {
 
@@ -48,8 +49,18 @@ const Login: React.FC = () => {
         setInputUsernameValue(input);
     }
 
-    const handleRegister = () => {
+    const handleRegister = async () => {
+        if (inputLoginStatus === "error" || inputPasswordStatus === "error") {
+            return;
+        }
 
+        const responseDTO = await Api.auth.register({
+            email: inputLoginValue,
+            username: inputUsernameValue,
+            password: inputPasswordValue,
+        });
+
+        console.log(responseDTO);
     }
 
     const isValidEmail = (email: string) => {
