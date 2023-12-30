@@ -7,6 +7,12 @@ const Rate: React.FC = () => {
     const [rate, setRate] = useState(0);
     const [selectedRate, setSelectedRate] = useState(0);
 
+    const [isThanksTextHidden, setIsThanksTextHidden] = useState(true);
+
+    const onSend = () => {
+        setIsThanksTextHidden(!isThanksTextHidden);
+    }
+
     const isStarActive = (n: number): boolean => {
         if (rate != 0 && selectedRate == 0) {
             return n <= rate;
@@ -49,6 +55,22 @@ const Rate: React.FC = () => {
 
             <div className={styles.container}>
                 { renderStars() }
+            </div>
+
+            <div className={styles.thanksContainer}>
+
+                {
+                    isThanksTextHidden && rate !== 0  &&
+                    <div className={styles.sendButton} onClick={onSend}>
+                        {"send -->"}
+                    </div>
+                }
+
+                {
+                    !isThanksTextHidden &&
+                    "thanks for your f33dback!"
+                }
+                {/* TODO: Add text animation here */}
             </div>
         </div>
     );

@@ -7,6 +7,30 @@
     height: 65vh;
 }
 
+.thanksContainer {
+    height: 34vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 36px;
+    color: #FFDE8A;
+    text-shadow: 0 0 10px rgba(255, 222, 138, 1), 0 0 30px rgba(255, 222, 138, 1);
+}
+
+.sendButton {
+    color: #FFDE8A;
+    text-shadow: 0 0 10px rgba(255, 222, 138, 0.5), 0 0 30px rgba(255, 222, 138, 0.5);
+    transition: 0.3s;
+}
+
+.sendButton:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(255, 222, 138, 1), 0 0 30px rgba(255, 222, 138, 1);
+    transition: 0.3s;
+}
+
 .star {
     cursor: pointer;
     transition: 0.3s;
