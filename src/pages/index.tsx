@@ -18,7 +18,6 @@ const Home: React.FC = () => {
     const [inputUrlStatus, setInputUrlStatus] = useState<"" | "warning" | "error" | undefined>("");
     const [inputAliasValue, setInputAliasValue] = useState<string>("");
     const [inputAliasStatus, setInputAliasStatus] = useState<"" | "warning" | "error" | undefined>("");
-    const [isCreatePossible, setIsCreatePossible] = useState<boolean>(false);
 
     const [createdUrl, setCreatedUrl] = useState("");
     const [responseMessage, setResponseMessage] = useState("");
@@ -31,15 +30,8 @@ const Home: React.FC = () => {
 
         if (isValidUrl(input) || input === "") {
             setInputUrlStatus("");
-
-            if (input === "" || inputAliasStatus == "error") {
-                setIsCreatePossible(false);
-            } else {
-                setIsCreatePossible(true);
-            }
         } else {
             setInputUrlStatus("error");
-            setIsCreatePossible(false);
         }
         setInputUrlValue(input);
     }
@@ -49,21 +41,14 @@ const Home: React.FC = () => {
 
         if (isValidPathSegment(input) || input === "") {
             setInputAliasStatus("");
-
-            if (inputUrlValue === "" || inputAliasStatus == "error") {
-                setIsCreatePossible(false);
-            } else {
-                setIsCreatePossible(true);
-            }
         } else {
             setInputAliasStatus("error");
-            setIsCreatePossible(false);
         }
         setInputAliasValue(input);
     }
 
     const handleCreateUrl = async () => {
-        if (!isCreatePossible) {
+        if (inputUrlStatus === "error" || inputAliasStatus === "error") {
             return;
         }
 
@@ -140,7 +125,7 @@ const Home: React.FC = () => {
                     <div className={styles.item + " " + styles.confirmButton}>
                         <Button
                             text={"make!short"}
-                            disabled={!isCreatePossible}
+                            disabled={inputUrlStatus === "error" || inputAliasStatus === "error"}
                             onClick={handleCreateUrl}
                         />
                     </div>

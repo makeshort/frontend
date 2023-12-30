@@ -20,6 +20,7 @@
 
 .button:disabled {
     color: var(--placeholder-color);
+    background-color: transparent;
     outline: 2px solid var(--placeholder-color);
     transition: 0.3s;
 }
